@@ -44,7 +44,7 @@ class Product(models.Model):
         verbose_name=_("Creation date"), auto_now_add=True, null=False
     )
     expiration_date = models.DateField(verbose_name=_("Expiration Date"), null=True, default='DEFAULT VALUE')
-    price = models.FloatField()
+    price = models.CharField(max_length=300, blank=True, null=False)
 
     class Meta:
         db_table = 'product'
